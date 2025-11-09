@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="https://skylinebrian.github.io/Website-Example/img/post-bg-2015.jpg">
-    <meta property="twitter:image" content="https://skylinebrian.github.io/Website-Example/img/post-bg-2015.jpg" />
+    <meta property="og:image" content="https://skylinebrian.github.io/img/post-bg-2015.jpg">
+    <meta property="twitter:image" content="https://skylinebrian.github.io/img/post-bg-2015.jpg" />
     
 
     
@@ -26,7 +26,7 @@
     <meta property="twitter:description" content="Nginmesh是NGINX的Service Mesh开源项目，用于Istio服务网格平台中的数据面代理。它旨在提供七层负载均衡和服务路由功能，与Istio集成作为sidecar部署，并将以“标准，可靠和安全的方式”使得服务间通信更容易。Nginmesh在今年底已经连续发布了0.2和0.3版本，提供了服务发现，请求转发，路由规则，性能指标收集等功能。本文介绍如何采用kubeadmin安装kubernetes集群并部署Nginmesh sidecar。" />
     
 
-    <meta property="og:url" content="https://skylinebrian.github.io/Website-Example/2018/01/02/nginmesh-install/" />
+    <meta property="og:url" content="https://skylinebrian.github.io/2018/01/02/nginmesh-install/" />
 
     
     <meta property="twitter:card" content="summary" />
@@ -34,25 +34,25 @@
     
 
     <meta name="keyword"  content="赵化冰, zhaohuabing, Zhaohuabing, , 赵化冰的网络日志, 赵化冰的博客, Zhaohuabing Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice">
-    <link rel="shortcut icon" href="../../../../Website-Example/img/favicon.ico">
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
 
     <title>Nginx开源Service Mesh组件Nginmesh安装指南 | GeoNAVI Lab</title>
 
-    <link rel="canonical" href="../../../../Website-Example/2018/01/02/nginmesh-install/">
+    <link rel="canonical" href="../../../../2018/01/02/nginmesh-install/">
 
     
 
     
-    <link rel="stylesheet" href="../../../../Website-Example/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
 
     
-    <link rel="stylesheet" href="../../../../Website-Example/css/hugo-theme-cleanwhite.min.css">
+    <link rel="stylesheet" href="../../../../css/hugo-theme-cleanwhite.min.css">
 
     
-    <link rel="stylesheet" href="../../../../Website-Example/css/zanshang.min.css">
+    <link rel="stylesheet" href="../../../../css/zanshang.min.css">
 
     
-    <link rel="stylesheet" href="../../../../Website-Example/css/font-awesome.all.min.css">
+    <link rel="stylesheet" href="../../../../css/font-awesome.all.min.css">
 
     
     
@@ -60,16 +60,16 @@
     
 
     
-    <script src="../../../../Website-Example/js/jquery.min.js"></script>
+    <script src="../../../../js/jquery.min.js"></script>
 
     
-    <script src="../../../../Website-Example/js/bootstrap.min.js"></script>
+    <script src="../../../../js/bootstrap.min.js"></script>
 
     
-    <script src="../../../../Website-Example/js/hux-blog.min.js"></script>
+    <script src="../../../../js/hux-blog.min.js"></script>
 
     
-    <script src="../../../../Website-Example/js/lazysizes.min.js"></script>
+    <script src="../../../../js/lazysizes.min.js"></script>
 
     
     
@@ -112,7 +112,7 @@
                         <li><a href="../../../../about//">ABOUT</a></li>
                     
 		            <li>
-                        <a href="../../../../Website-Example/search"><i class="fa fa-search"></i></a>
+                        <a href="../../../../search"><i class="fa fa-search"></i></a>
 		           </li>
                 </ul>
             </div>
@@ -155,7 +155,7 @@
 
 <style type="text/css">
     header.intro-header {
-        background-image: url('/Website-Example/img/post-bg-2015.jpg')
+        background-image: url('/img/post-bg-2015.jpg')
     }
 </style>
 
@@ -547,7 +547,7 @@ iptables -t nat -N ISTIO_OUTPUT                                               -m
 <div class="zs-modal-box">
 	<div class="zs-modal-head">
 		<button type="button" class="close">×</button>
-		<span class="author"><a href="https://skylinebrian.github.io/Website-Example/"><img src="../../../../Website-Example/img/favicon.png" />GeoNAVI Lab</a></span>
+		<span class="author"><a href="https://skylinebrian.github.io/"><img src="../../../../img/favicon.png" />GeoNAVI Lab</a></span>
         
 	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
 		
@@ -565,15 +565,15 @@ iptables -t nat -N ISTIO_OUTPUT                                               -m
 		<div class="zs-modal-pay">
 			<button class="btn btn-bred" id="pay-text">2元</button>
 			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
-			<img src="../../../../Website-Example/img/reward/wechat-2.png"  id="pay-image"/>
+			<img src="../../../../img/reward/wechat-2.png"  id="pay-image"/>
 		</div>
 	</div>
 	<div class="zs-modal-footer">
-		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="../../../../Website-Example/img/reward/wechat-btn.png"/></span></label>
-		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="../../../../Website-Example/img/reward/alipay-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="../../../../img/reward/wechat-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="../../../../img/reward/alipay-btn.png"/></span></label>
 	</div>
 </div>
-<script type="text/javascript" src="../../../../Website-Example/js/reward.js"></script>
+<script type="text/javascript" src="../../../../js/reward.js"></script>
 
                 
 
@@ -582,13 +582,13 @@ iptables -t nat -N ISTIO_OUTPUT                                               -m
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="../../../../Website-Example/2017/11/28/access-application-from-outside/" data-toggle="tooltip" data-placement="top" title="如何从外部访问Kubernetes集群中的应用？">&larr;
+                        <a href="../../../../2017/11/28/access-application-from-outside/" data-toggle="tooltip" data-placement="top" title="如何从外部访问Kubernetes集群中的应用？">&larr;
                             Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="../../../../Website-Example/2018/05/22/user_authentication_authorization/" data-toggle="tooltip" data-placement="top" title="如何构建安全的微服务应用？">Next
+                        <a href="../../../../2018/05/22/user_authentication_authorization/" data-toggle="tooltip" data-placement="top" title="如何构建安全的微服务应用？">Next
                             Post &rarr;</a>
                     </li>
                     
@@ -609,7 +609,7 @@ iptables -t nat -N ISTIO_OUTPUT                                               -m
 <script>
     Artalk.init({
         el: '#Comments',
-        pageKey: 'https:\/\/skylinebrian.github.io\/Website-Example\/2018\/01\/02\/nginmesh-install\/',
+        pageKey: 'https:\/\/skylinebrian.github.io\/2018\/01\/02\/nginmesh-install\/',
         pageTitle: 'Nginx开源Service Mesh组件Nginmesh安装指南',
         server: 'https:\/\/xxx.xxx.com',
         site: 'xxx blog',
@@ -759,7 +759,7 @@ iptables -t nat -N ISTIO_OUTPUT                                               -m
 		            
                     
                     <li>
-                        <a target="_blank" href="../../../../Website-Example/your%20wechat%20qr%20code%20image">
+                        <a target="_blank" href="../../../../your%20wechat%20qr%20code%20image">
                             <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-weixin fa-stack-1x fa-inverse"></i>
@@ -920,7 +920,7 @@ iptables -t nat -N ISTIO_OUTPUT                                               -m
     
 
 
-    loadAsync("\/Website-Example\/js\/jquery.nav.js", function () {
+    loadAsync("\/js\/jquery.nav.js", function () {
         $('.catalog-body').onePageNav({
             currentClass: "active",
             changeHash: !1,

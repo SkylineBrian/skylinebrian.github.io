@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="https://skylinebrian.github.io/Website-Example//img/2018-05-23-external_system_auth/background.jpg">
-    <meta property="twitter:image" content="https://skylinebrian.github.io/Website-Example//img/2018-05-23-external_system_auth/background.jpg" />
+    <meta property="og:image" content="https://skylinebrian.github.io//img/2018-05-23-external_system_auth/background.jpg">
+    <meta property="twitter:image" content="https://skylinebrian.github.io//img/2018-05-23-external_system_auth/background.jpg" />
     
 
     
@@ -26,7 +26,7 @@
     <meta property="twitter:description" content="一些外部的第三方系统可能需要访问系统内部的微服务。例如在网上商店的例子中，外部的推荐服务可能需要接入系统，以获取商店的商品目录信息。相对于内部服务之间的访问而言，外部系统的访问需要进行严格的安全控制。" />
     
 
-    <meta property="og:url" content="https://skylinebrian.github.io/Website-Example/2018/05/23/external_system_auth/" />
+    <meta property="og:url" content="https://skylinebrian.github.io/2018/05/23/external_system_auth/" />
 
     
     <meta property="twitter:card" content="summary" />
@@ -34,25 +34,25 @@
     
 
     <meta name="keyword"  content="赵化冰, zhaohuabing, Zhaohuabing, , 赵化冰的网络日志, 赵化冰的博客, Zhaohuabing Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice">
-    <link rel="shortcut icon" href="../../../../Website-Example/img/favicon.ico">
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
 
     <title>微服务安全沉思录之三 | GeoNAVI Lab</title>
 
-    <link rel="canonical" href="../../../../Website-Example/2018/05/23/external_system_auth/">
+    <link rel="canonical" href="../../../../2018/05/23/external_system_auth/">
 
     
 
     
-    <link rel="stylesheet" href="../../../../Website-Example/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
 
     
-    <link rel="stylesheet" href="../../../../Website-Example/css/hugo-theme-cleanwhite.min.css">
+    <link rel="stylesheet" href="../../../../css/hugo-theme-cleanwhite.min.css">
 
     
-    <link rel="stylesheet" href="../../../../Website-Example/css/zanshang.min.css">
+    <link rel="stylesheet" href="../../../../css/zanshang.min.css">
 
     
-    <link rel="stylesheet" href="../../../../Website-Example/css/font-awesome.all.min.css">
+    <link rel="stylesheet" href="../../../../css/font-awesome.all.min.css">
 
     
     
@@ -60,16 +60,16 @@
     
 
     
-    <script src="../../../../Website-Example/js/jquery.min.js"></script>
+    <script src="../../../../js/jquery.min.js"></script>
 
     
-    <script src="../../../../Website-Example/js/bootstrap.min.js"></script>
+    <script src="../../../../js/bootstrap.min.js"></script>
 
     
-    <script src="../../../../Website-Example/js/hux-blog.min.js"></script>
+    <script src="../../../../js/hux-blog.min.js"></script>
 
     
-    <script src="../../../../Website-Example/js/lazysizes.min.js"></script>
+    <script src="../../../../js/lazysizes.min.js"></script>
 
     
     
@@ -112,7 +112,7 @@
                         <li><a href="../../../../about//">ABOUT</a></li>
                     
 		            <li>
-                        <a href="../../../../Website-Example/search"><i class="fa fa-search"></i></a>
+                        <a href="../../../../search"><i class="fa fa-search"></i></a>
 		           </li>
                 </ul>
             </div>
@@ -284,7 +284,7 @@ grant_type=authorization_code
 <div class="zs-modal-box">
 	<div class="zs-modal-head">
 		<button type="button" class="close">×</button>
-		<span class="author"><a href="https://skylinebrian.github.io/Website-Example/"><img src="../../../../Website-Example/img/favicon.png" />GeoNAVI Lab</a></span>
+		<span class="author"><a href="https://skylinebrian.github.io/"><img src="../../../../img/favicon.png" />GeoNAVI Lab</a></span>
         
 	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
 		
@@ -302,15 +302,15 @@ grant_type=authorization_code
 		<div class="zs-modal-pay">
 			<button class="btn btn-bred" id="pay-text">2元</button>
 			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
-			<img src="../../../../Website-Example/img/reward/wechat-2.png"  id="pay-image"/>
+			<img src="../../../../img/reward/wechat-2.png"  id="pay-image"/>
 		</div>
 	</div>
 	<div class="zs-modal-footer">
-		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="../../../../Website-Example/img/reward/wechat-btn.png"/></span></label>
-		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="../../../../Website-Example/img/reward/alipay-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="../../../../img/reward/wechat-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="../../../../img/reward/alipay-btn.png"/></span></label>
 	</div>
 </div>
-<script type="text/javascript" src="../../../../Website-Example/js/reward.js"></script>
+<script type="text/javascript" src="../../../../js/reward.js"></script>
 
                 
 
@@ -319,13 +319,13 @@ grant_type=authorization_code
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="../../../../Website-Example/2018/05/23/service_2_service_auth/" data-toggle="tooltip" data-placement="top" title="微服务安全沉思录之二">&larr;
+                        <a href="../../../../2018/05/23/service_2_service_auth/" data-toggle="tooltip" data-placement="top" title="微服务安全沉思录之二">&larr;
                             Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="../../../../Website-Example/2018/05/24/set_up_my_ubuntu_desktop/" data-toggle="tooltip" data-placement="top" title="Everything about Setting Up My Ubuntu Desktop">Next
+                        <a href="../../../../2018/05/24/set_up_my_ubuntu_desktop/" data-toggle="tooltip" data-placement="top" title="Everything about Setting Up My Ubuntu Desktop">Next
                             Post &rarr;</a>
                     </li>
                     
@@ -346,7 +346,7 @@ grant_type=authorization_code
 <script>
     Artalk.init({
         el: '#Comments',
-        pageKey: 'https:\/\/skylinebrian.github.io\/Website-Example\/2018\/05\/23\/external_system_auth\/',
+        pageKey: 'https:\/\/skylinebrian.github.io\/2018\/05\/23\/external_system_auth\/',
         pageTitle: '微服务安全沉思录之三',
         server: 'https:\/\/xxx.xxx.com',
         site: 'xxx blog',
@@ -496,7 +496,7 @@ grant_type=authorization_code
 		            
                     
                     <li>
-                        <a target="_blank" href="../../../../Website-Example/your%20wechat%20qr%20code%20image">
+                        <a target="_blank" href="../../../../your%20wechat%20qr%20code%20image">
                             <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-weixin fa-stack-1x fa-inverse"></i>
@@ -657,7 +657,7 @@ grant_type=authorization_code
     
 
 
-    loadAsync("\/Website-Example\/js\/jquery.nav.js", function () {
+    loadAsync("\/js\/jquery.nav.js", function () {
         $('.catalog-body').onePageNav({
             currentClass: "active",
             changeHash: !1,

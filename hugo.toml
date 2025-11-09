@@ -1,4 +1,4 @@
-baseurl = "https://skylinebrian.github.io/Website-Example/"
+baseurl = "https://skylinebrian.github.io/"
 title = "GeoNAVI Lab"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
