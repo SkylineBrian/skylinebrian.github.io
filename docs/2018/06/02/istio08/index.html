@@ -34,25 +34,25 @@
     
 
     <meta name="keyword"  content="赵化冰, zhaohuabing, Zhaohuabing, , 赵化冰的网络日志, 赵化冰的博客, Zhaohuabing Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice">
-    <link rel="shortcut icon" href="/Website-Example/img/favicon.ico">
+    <link rel="shortcut icon" href="../../../../Website-Example/img/favicon.ico">
 
     <title>Istio 0.8 Release发布 | GeoNAVI Lab</title>
 
-    <link rel="canonical" href="/Website-Example/2018/06/02/istio08/">
+    <link rel="canonical" href="../../../../Website-Example/2018/06/02/istio08/">
 
     
 
     
-    <link rel="stylesheet" href="/Website-Example/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../Website-Example/css/bootstrap.min.css">
 
     
-    <link rel="stylesheet" href="/Website-Example/css/hugo-theme-cleanwhite.min.css">
+    <link rel="stylesheet" href="../../../../Website-Example/css/hugo-theme-cleanwhite.min.css">
 
     
-    <link rel="stylesheet" href="/Website-Example/css/zanshang.min.css">
+    <link rel="stylesheet" href="../../../../Website-Example/css/zanshang.min.css">
 
     
-    <link rel="stylesheet" href="/Website-Example/css/font-awesome.all.min.css">
+    <link rel="stylesheet" href="../../../../Website-Example/css/font-awesome.all.min.css">
 
     
     
@@ -60,16 +60,16 @@
     
 
     
-    <script src="/Website-Example/js/jquery.min.js"></script>
+    <script src="../../../../Website-Example/js/jquery.min.js"></script>
 
     
-    <script src="/Website-Example/js/bootstrap.min.js"></script>
+    <script src="../../../../Website-Example/js/bootstrap.min.js"></script>
 
     
-    <script src="/Website-Example/js/hux-blog.min.js"></script>
+    <script src="../../../../Website-Example/js/hux-blog.min.js"></script>
 
     
-    <script src="/Website-Example/js/lazysizes.min.js"></script>
+    <script src="../../../../Website-Example/js/lazysizes.min.js"></script>
 
     
     
@@ -91,7 +91,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">GeoNAVI Lab</a>
+            <a class="navbar-brand" href="../../../../">GeoNAVI Lab</a>
         </div>
 
         
@@ -100,19 +100,19 @@
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/">All Posts</a>
+                        <a href="../../../../">All Posts</a>
                     </li>
                     
                     
 		    
-                        <li><a href="/archive//">ARCHIVE</a></li>
+                        <li><a href="../../../../archive//">ARCHIVE</a></li>
                     
-                        <li><a href="/notes//">Paper</a></li>
+                        <li><a href="../../../../notes//">Paper</a></li>
                     
-                        <li><a href="/about//">ABOUT</a></li>
+                        <li><a href="../../../../about//">ABOUT</a></li>
                     
 		            <li>
-                        <a href="/Website-Example/search"><i class="fa fa-search"></i></a>
+                        <a href="../../../../Website-Example/search"><i class="fa fa-search"></i></a>
 		           </li>
                 </ul>
             </div>
@@ -167,7 +167,7 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/istio" title="Istio">
+                        <a class="tag" href="../../../../tags/istio" title="Istio">
                             Istio
                         </a>
                         
@@ -217,7 +217,7 @@
 <p>新版本中不再使用K8s中的Ingress，转而采用Gateway来统一配置Service Mesh中的各个HTTP/TCP负载均衡器。Gateway可以是处理入口流量的Ingress Gateway，负责Service Mesh内部各个服务间通信的Sidecar Proxy，也可以是负责出口流量的Egress Gateway。</p>
 <p>Mesh中涉及到的三类Gateway: <br>
 
-  <img src="/img/2018-06-02-istio08/gateways.svg" alt="Gateway">
+  <img src="../../../../img/2018-06-02-istio08/gateways.svg" alt="Gateway">
 
 </p>
 <p>该变化的原因是K8s中的Ingress对象功能过于简单，不能满足Istio灵活的路由规则需求。在0.8版本中，L4-L6的配置和L7的配置被分别处理，Gateway中只配置L4-L6的功能，例如暴露的端口，TLS设置。然后用户可以采用VirtualService来配置标准的Istio规则，并和Gateway进行绑定。</p>
@@ -308,7 +308,7 @@ spec:
 <div class="zs-modal-box">
 	<div class="zs-modal-head">
 		<button type="button" class="close">×</button>
-		<span class="author"><a href="https://skylinebrian.github.io/Website-Example/"><img src="/Website-Example/img/favicon.png" />GeoNAVI Lab</a></span>
+		<span class="author"><a href="https://skylinebrian.github.io/Website-Example/"><img src="../../../../Website-Example/img/favicon.png" />GeoNAVI Lab</a></span>
         
 	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
 		
@@ -326,15 +326,15 @@ spec:
 		<div class="zs-modal-pay">
 			<button class="btn btn-bred" id="pay-text">2元</button>
 			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
-			<img src="/Website-Example/img/reward/wechat-2.png"  id="pay-image"/>
+			<img src="../../../../Website-Example/img/reward/wechat-2.png"  id="pay-image"/>
 		</div>
 	</div>
 	<div class="zs-modal-footer">
-		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="/Website-Example/img/reward/wechat-btn.png"/></span></label>
-		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="/Website-Example/img/reward/alipay-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="../../../../Website-Example/img/reward/wechat-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="../../../../Website-Example/img/reward/alipay-btn.png"/></span></label>
 	</div>
 </div>
-<script type="text/javascript" src="/Website-Example/js/reward.js"></script>
+<script type="text/javascript" src="../../../../Website-Example/js/reward.js"></script>
 
                 
 
@@ -343,13 +343,13 @@ spec:
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/Website-Example/2018/05/24/set_up_my_ubuntu_desktop/" data-toggle="tooltip" data-placement="top" title="Everything about Setting Up My Ubuntu Desktop">&larr;
+                        <a href="../../../../Website-Example/2018/05/24/set_up_my_ubuntu_desktop/" data-toggle="tooltip" data-placement="top" title="Everything about Setting Up My Ubuntu Desktop">&larr;
                             Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/Website-Example/2018/06/04/introducing-the-istio-v1alpha3-routing-api/" data-toggle="tooltip" data-placement="top" title="Istio v1aplha3 routing API介绍(译文）">Next
+                        <a href="../../../../Website-Example/2018/06/04/introducing-the-istio-v1alpha3-routing-api/" data-toggle="tooltip" data-placement="top" title="Istio v1aplha3 routing API介绍(译文）">Next
                             Post &rarr;</a>
                     </li>
                     
@@ -407,7 +407,7 @@ spec:
                 
                 <section>
                     <hr class="hidden-sm hidden-xs">
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <h5><a href="../../../../tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                         
                         
@@ -416,7 +416,7 @@ spec:
                         
                         
                         
-                        <a href="/tags/docker" title="docker">
+                        <a href="../../../../tags/docker" title="docker">
                             docker
                         </a>
                         
@@ -424,7 +424,7 @@ spec:
                         
                         
                         
-                        <a href="/tags/istio" title="istio">
+                        <a href="../../../../tags/istio" title="istio">
                             istio
                         </a>
                         
@@ -434,7 +434,7 @@ spec:
                         
                         
                         
-                        <a href="/tags/kubernetes" title="kubernetes">
+                        <a href="../../../../tags/kubernetes" title="kubernetes">
                             kubernetes
                         </a>
                         
@@ -442,7 +442,7 @@ spec:
                         
                         
                         
-                        <a href="/tags/microservice" title="microservice">
+                        <a href="../../../../tags/microservice" title="microservice">
                             microservice
                         </a>
                         
@@ -450,19 +450,19 @@ spec:
                         
                         
                         
-                        <a href="/tags/security" title="security">
+                        <a href="../../../../tags/security" title="security">
                             security
                         </a>
                         
                         
                         
-                        <a href="/tags/service-mesh" title="service mesh">
+                        <a href="../../../../tags/service-mesh" title="service mesh">
                             service mesh
                         </a>
                         
                         
                         
-                        <a href="/tags/tips" title="tips">
+                        <a href="../../../../tags/tips" title="tips">
                             tips
                         </a>
                         
@@ -520,7 +520,7 @@ spec:
 		            
                     
                     <li>
-                        <a target="_blank" href="/Website-Example/your%20wechat%20qr%20code%20image">
+                        <a target="_blank" href="../../../../Website-Example/your%20wechat%20qr%20code%20image">
                             <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-weixin fa-stack-1x fa-inverse"></i>
