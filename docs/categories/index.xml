@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on GeoNAVI Lab</title>
-    <link>https://skylinebrian.github.io/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on GeoNAVI Lab</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 06 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://skylinebrian.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tips</title>
-      <link>https://skylinebrian.github.io/categories/tips/</link>
+      <link>http://localhost:1313/categories/tips/</link>
       <pubDate>Sun, 06 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://skylinebrian.github.io/categories/tips/</guid>
+      <guid>http://localhost:1313/categories/tips/</guid>
       <description></description>
     </item>
     <item>
       <title>Tech</title>
-      <link>https://skylinebrian.github.io/categories/tech/</link>
+      <link>http://localhost:1313/categories/tech/</link>
       <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
-      <guid>https://skylinebrian.github.io/categories/tech/</guid>
+      <guid>http://localhost:1313/categories/tech/</guid>
       <description></description>
     </item>
     <item>
       <title>Life</title>
-      <link>https://skylinebrian.github.io/categories/life/</link>
+      <link>http://localhost:1313/categories/life/</link>
       <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
-      <guid>https://skylinebrian.github.io/categories/life/</guid>
+      <guid>http://localhost:1313/categories/life/</guid>
       <description></description>
     </item>
   </channel>

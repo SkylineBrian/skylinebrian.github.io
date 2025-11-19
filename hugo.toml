@@ -100,19 +100,19 @@ canonifyURLs = true
   # --- Top navigation (ensure single trailing slashes) ---
   [[params.additional_menus]]
     title = "ARCHIVE"
-    href  = "/archive"
+    href  = "archive"
   [[params.additional_menus]]
     title = "SHOWCASE"
-    href  = "/showcase"
+    href  = "showcase"
   [[params.additional_menus]]
     title = "ABOUT"
-    href  = "/about"
+    href  = "about"
   [[params.additional_menus]]
     title = "PEOPLE"
-    href  = "/people"
+    href  = "people"
   [[params.additional_menus]]
     title = "PUBLICATION"
-    href  = "/publication"
+    href  = "publication"
 
 [outputFormats.Algolia]
   baseName = "algolia"
