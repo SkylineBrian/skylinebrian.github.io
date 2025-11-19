@@ -34,25 +34,25 @@
     
 
     <meta name="keyword"  content="GeoNAVI, human mobility, spatial networks, transportation geography, accessibility, GIScience, UF">
-    <link rel="shortcut icon" href="http://localhost:1313/img/favicon.ico">
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
 
     <title>Istio v1aplha3 routing API介绍(译文） | GeoNAVI Lab</title>
 
-    <link rel="canonical" href="http://localhost:1313/2018/06/04/introducing-the-istio-v1alpha3-routing-api/">
+    <link rel="canonical" href="../../../../2018/06/04/introducing-the-istio-v1alpha3-routing-api/">
 
     
 
     
-    <link rel="stylesheet" href="http://localhost:1313/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
 
     
-    <link rel="stylesheet" href="http://localhost:1313/css/hugo-theme-cleanwhite.min.css">
+    <link rel="stylesheet" href="../../../../css/hugo-theme-cleanwhite.min.css">
 
     
-    <link rel="stylesheet" href="http://localhost:1313/css/zanshang.min.css">
+    <link rel="stylesheet" href="../../../../css/zanshang.min.css">
 
     
-    <link rel="stylesheet" href="http://localhost:1313/css/font-awesome.all.min.css">
+    <link rel="stylesheet" href="../../../../css/font-awesome.all.min.css">
 
     
     
@@ -60,16 +60,16 @@
     
 
     
-    <script src="http://localhost:1313/js/jquery.min.js"></script>
+    <script src="../../../../js/jquery.min.js"></script>
 
     
-    <script src="http://localhost:1313/js/bootstrap.min.js"></script>
+    <script src="../../../../js/bootstrap.min.js"></script>
 
     
-    <script src="http://localhost:1313/js/hux-blog.min.js"></script>
+    <script src="../../../../js/hux-blog.min.js"></script>
 
     
-    <script src="http://localhost:1313/js/lazysizes.min.js"></script>
+    <script src="../../../../js/lazysizes.min.js"></script>
 
     
     
@@ -91,7 +91,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://localhost:1313/">GeoNAVI Lab</a>
+            <a class="navbar-brand" href="../../../../">GeoNAVI Lab</a>
         </div>
 
         
@@ -100,23 +100,23 @@
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="http://localhost:1313/">All Posts</a>
+                        <a href="../../../../">All Posts</a>
                     </li>
                     
                     
 		    
-                        <li><a href="http://localhost:1313/archive//">ARCHIVE</a></li>
+                        <li><a href="../../../../archive//">ARCHIVE</a></li>
                     
-                        <li><a href="http://localhost:1313/showcase//">SHOWCASE</a></li>
+                        <li><a href="../../../../showcase//">SHOWCASE</a></li>
                     
-                        <li><a href="http://localhost:1313/about//">ABOUT</a></li>
+                        <li><a href="../../../../about//">ABOUT</a></li>
                     
-                        <li><a href="http://localhost:1313/people//">PEOPLE</a></li>
+                        <li><a href="../../../../people//">PEOPLE</a></li>
                     
-                        <li><a href="http://localhost:1313/publication//">PUBLICATION</a></li>
+                        <li><a href="../../../../publication//">PUBLICATION</a></li>
                     
 		            <li>
-                        <a href="http://localhost:1313/search"><i class="fa fa-search"></i></a>
+                        <a href="../../../../search"><i class="fa fa-search"></i></a>
 		           </li>
                 </ul>
             </div>
@@ -198,7 +198,7 @@
 <h2 id="v1alpha3中的配置资源">v1alpha3中的配置资源</h2>
 <p>在一个典型的网格中，通常有一个或多个用于终结外部TLS链接，将流量引入网格的负载均衡器（我们称之为gateway）。 然后流量通过边车网关（sidecar gateway）流经内部服务。 应用程序使用外部服务的情况也很常见（例如访问Google Maps API），一些情况下，这些外部服务可能被直接调用；但在某些部署中，网格中所有访问外部服务的流量可能被要求强制通过专用的出口网关（Egress gateway）。 下图描绘了网关在网格中的使用情况。</p>
 <p>
-  <img src="http://localhost:1313/img/2018-06-04-introducing-the-istio-v1alpha3-routing-api/gateways.svg" alt="Gateway">
+  <img src="../../../../img/2018-06-04-introducing-the-istio-v1alpha3-routing-api/gateways.svg" alt="Gateway">
 
 </p>
 <p>考虑到上述因素，<code>v1alpha3</code>引入了以下这些新的配置资源来控制进入网格，网格内部和离开网格的流量路由。</p>
@@ -211,7 +211,7 @@
 <p><code>VirtualService</code>，<code>DestinationRule</code>和<code>ServiceEntry</code>分别替换了原API中的<code>RouteRule</code>，<code>DestinationPolicy</code>和<code>EgressRule</code>。 <code>Gateway</code>是一个独立于平台的抽象，用于对流入专用中间设备的流量进行建模。</p>
 <p>下图描述了跨多个配置资源的控制流程。
 
-  <img src="http://localhost:1313/img/2018-06-04-introducing-the-istio-v1alpha3-routing-api/virtualservices-destrules.svg" alt="不同配置资源之间的关系">
+  <img src="../../../../img/2018-06-04-introducing-the-istio-v1alpha3-routing-api/virtualservices-destrules.svg" alt="不同配置资源之间的关系">
 
 </p>
 <h3 id="gateway">Gateway</h3>
@@ -254,8 +254,8 @@
 </span></span></code></pre></div><p>Gateway可以用于建模边缘代理或纯粹的内部代理，如第一张图所示。 无论在哪个位置，所有网关都可以用相同的方式进行配置和控制。</p>
 <h3 id="virtualservice">VirtualService</h3>
 <p>用一种叫做“Virtual services”的东西代替路由规则可能看起来有点奇怪，但对于它配置的内容而言，这事实上是一个更好的名称，特别是在重新设计API以解决先前模型的可扩展性问题之后。</p>
-<p>实际上，发生的变化是：在之前的模型中，需要用一组相互独立的配置规则来为特定的目的服务设置路由规则，并通过precedence字段来控制这些规则的顺序；在新的API中，则直接对（虚拟）服务进行配置，该虚拟服务的所有规则以一个有序列表的方式配置在对应的<a href="http://localhost:1313/docs/reference/config/istio.networking.v1alpha3/#VirtualService">VirtualService</a> 资源中。</p>
-<p>例如，之前在<a href="http://localhost:1313/docs/guides/bookinfo/">Bookinfo</a> 应用程序的reviews服务中有两个RouteRule资源，如下所示：</p>
+<p>实际上，发生的变化是：在之前的模型中，需要用一组相互独立的配置规则来为特定的目的服务设置路由规则，并通过precedence字段来控制这些规则的顺序；在新的API中，则直接对（虚拟）服务进行配置，该虚拟服务的所有规则以一个有序列表的方式配置在对应的<a href="../../../../docs/reference/config/istio.networking.v1alpha3/#VirtualService">VirtualService</a> 资源中。</p>
+<p>例如，之前在<a href="../../../../docs/guides/bookinfo/">Bookinfo</a> 应用程序的reviews服务中有两个RouteRule资源，如下所示：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">apiVersion</span>: config.istio.io/v1alpha2
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">kind</span>: RouteRule
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">metadata</span>:
@@ -462,8 +462,8 @@
 	
         <div class="short-about">
             
-            <a href="http://localhost:1313/about">
-               <img src="http://localhost:1313/img/favicon.png" alt="avatar" style="cursor: pointer" />
+            <a href="../../../../about">
+               <img src="../../../../img/favicon.png" alt="avatar" style="cursor: pointer" />
             </a>
             
             
@@ -544,7 +544,7 @@
                
             
                
-                    <a href="http://localhost:1313/tags/docker" title="docker">
+                    <a href="../../../../tags/docker" title="docker">
                         docker
                     </a>
                
@@ -552,7 +552,7 @@
                
             
                
-                    <a href="http://localhost:1313/tags/istio" title="istio">
+                    <a href="../../../../tags/istio" title="istio">
                         istio
                     </a>
                
@@ -562,7 +562,7 @@
                
             
                
-                    <a href="http://localhost:1313/tags/kubernetes" title="kubernetes">
+                    <a href="../../../../tags/kubernetes" title="kubernetes">
                         kubernetes
                     </a>
                
@@ -570,7 +570,7 @@
                
             
                
-                    <a href="http://localhost:1313/tags/microservice" title="microservice">
+                    <a href="../../../../tags/microservice" title="microservice">
                         microservice
                     </a>
                
@@ -578,19 +578,19 @@
                
             
                
-                    <a href="http://localhost:1313/tags/security" title="security">
+                    <a href="../../../../tags/security" title="security">
                         security
                     </a>
                
             
                
-                    <a href="http://localhost:1313/tags/service-mesh" title="service mesh">
+                    <a href="../../../../tags/service-mesh" title="service mesh">
                         service mesh
                     </a>
                
             
                
-                    <a href="http://localhost:1313/tags/tips" title="tips">
+                    <a href="../../../../tags/tips" title="tips">
                         tips
                     </a>
                
@@ -614,15 +614,15 @@
         <h5>LAST POSTS</h5>
         <ul>
         
-            <li><a href="http://localhost:1313/2025/07/06/mathematical-formulae/">Authoring mathematical formulae</a></li>
+            <li><a href="../../../../2025/07/06/mathematical-formulae/">Authoring mathematical formulae</a></li>
         
-            <li><a href="http://localhost:1313/post/readme/">Clean White Theme for Hugo</a></li>
+            <li><a href="../../../../post/readme/">Clean White Theme for Hugo</a></li>
         
-            <li><a href="http://localhost:1313/2018/06/04/introducing-the-istio-v1alpha3-routing-api/">Istio v1aplha3 routing API介绍(译文）</a></li>
+            <li><a href="../../../../2018/06/04/introducing-the-istio-v1alpha3-routing-api/">Istio v1aplha3 routing API介绍(译文）</a></li>
         
-            <li><a href="http://localhost:1313/2018/06/02/istio08/">Istio 0.8 Release发布</a></li>
+            <li><a href="../../../../2018/06/02/istio08/">Istio 0.8 Release发布</a></li>
         
-            <li><a href="http://localhost:1313/2018/05/24/set_up_my_ubuntu_desktop/">Everything about Setting Up My Ubuntu Desktop</a></li>
+            <li><a href="../../../../2018/05/24/set_up_my_ubuntu_desktop/">Everything about Setting Up My Ubuntu Desktop</a></li>
         
         </ul>
     </section>
