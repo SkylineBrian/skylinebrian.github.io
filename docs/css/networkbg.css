@@ -9,16 +9,3 @@
     pointer-events: none;
     background: transparent !important; /* 一定要透明 */
 }
-
-.sidebar-container li,
-.sidebar-container a {
-    color: #444 !important;
-}
-
-.sidebar-container h5 {
-    color: #333 !important;
-}
-
-.sidebar-container li a:hover {
-    color: #000 !important;
-}
