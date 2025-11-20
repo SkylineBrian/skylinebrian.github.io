@@ -7,5 +7,5 @@
     height: 100%;
     z-index: -1;
     pointer-events: none;
-    background: transparent !important; /* 一定要透明 */
+    background: transparent !important;
 }
