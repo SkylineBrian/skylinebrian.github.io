@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on GEONAVI LAB</title>
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on GEONAVI LAB</description>
+    <title>Tags on GeoNAVI Lab</title>
+    <link>https://skylinebrian.github.io/tags/</link>
+    <description>Recent content in Tags on GeoNAVI Lab</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Jul 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://skylinebrian.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GeoNAVI</title>
-      <link>http://localhost:1313/tags/geonavi/</link>
+      <link>https://skylinebrian.github.io/tags/geonavi/</link>
       <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/geonavi/</guid>
+      <guid>https://skylinebrian.github.io/tags/geonavi/</guid>
       <description></description>
     </item>
   </channel>

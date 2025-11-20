@@ -45,7 +45,7 @@ Dr. Hu’s research and teaching focus on **urban transportation**, **human mobi
 
 | Name | Current / Recent Position |
 |------|---------------------------|
-| [**Dr. Yue Jing**](https://geog.ufl.edu/grad-students/jing/) | Assistant Professor, University of North Dakota |
+| [**Dr. Yue Jing**](https://geoyjing.github.io/) | Assistant Professor, University of North Dakota |
 | [**Cade Gouin**](https://www.linkedin.com/in/cade-josiah-51bb29167/) | Chief Operating Officer, Zenscape Marketing |
 | [**Bailey Glover**](https://www.linkedin.com/in/bailey-glover/) | Former GeoNAVI Lab member |
 | [**Finn Rimay**](https://www.linkedin.com/in/finn-rimay-7aa984284/) | Former GeoNAVI Lab member |
