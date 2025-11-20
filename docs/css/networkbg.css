@@ -1,4 +1,4 @@
-
+/* 只在页面两侧显示网络背景，中间留白给正文 */
 #network-bg {
     position: fixed;
     top: 0;
@@ -8,4 +8,17 @@
     z-index: -1;
     pointer-events: none;
     background: transparent !important;
+
+    /* 中间 60% 不显示，左右各 20% 显示粒子 */
+    clip-path: polygon(
+        0 0,    15% 0,   15% 100%, 0 100%,   0 0,
+        85% 0, 100% 0, 100% 100%, 85% 100%, 85% 0
+    );
+}
+
+/* 小屏幕时直接关掉背景，避免挤占阅读空间 */
+@media (max-width: 991.98px) {
+    #network-bg {
+        display: none;
+    }
 }
