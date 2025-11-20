@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="GEONAVI LAB">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="http://localhost:1313//img/Network_BG.jpg">
+    <meta property="twitter:image" content="http://localhost:1313//img/Network_BG.jpg" />
+    
+
+    
+    <meta name="title" content="Measuring and visualizing place-based space-time job accessibility" />
+    <meta property="og:title" content="Measuring and visualizing place-based space-time job accessibility" />
+    <meta property="twitter:title" content="Measuring and visualizing place-based space-time job accessibility" />
+    
+
+    
+    <meta name="description" content="New article first published online: Journal of Transport Geography; DOI: 10.1016/j.jtrangeo.2018.12.002 ABSTRACT: Place-based accessibility measures, such as th...">
+    <meta property="og:description" content="New article first published online: Journal of Transport Geography; DOI: 10.1016/j.jtrangeo.2018.12.002 ABSTRACT: Place-based accessibility measures, such as th..." />
+    <meta property="twitter:description" content="New article first published online: Journal of Transport Geography; DOI: 10.1016/j.jtrangeo.2018.12.002 ABSTRACT: Place-based accessibility measures, such as th..." />
+    
+
+    <meta property="og:url" content="http://localhost:1313/2018/12/15/measuring-and-visualizing-place-based-space-time-job-accessibility/" />
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="GeoNAVI Lab, UF, human mobility, spatial networks, transportation geography, GIScience, accessibility, geovisualization">
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
+
+    <title>Measuring and visualizing place-based space-time job accessibility | GeoNAVI Lab at the University of Florida</title>
+
+    <link rel="canonical" href="../../../../2018/12/15/measuring-and-visualizing-place-based-space-time-job-accessibility/">
+
+    
+
+    
+    <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="../../../../css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="../../../../css/zanshang.min.css">
+
+    
+    <link rel="stylesheet" href="../../../../css/font-awesome.all.min.css">
+
+    
+    
+    
+    
+
+    
+    <script src="../../../../js/jquery.min.js"></script>
+
+    
+    <script src="../../../../js/bootstrap.min.js"></script>
+
+    
+    <script src="../../../../js/hux-blog.min.js"></script>
+
+    
+    <script src="../../../../js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../../../">GEONAVI LAB</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../../../../">Home</a>
+                    </li>
+                    
+                    
+		    
+                        <li><a href="../../../../about/">ABOUT</a></li>
+                    
+                        <li><a href="../../../../people/">PEOPLE</a></li>
+                    
+                        <li><a href="../../../../publication/">PUBLICATIONS</a></li>
+                    
+                        <li><a href="../../../../downloads/">DOWNLOADS</a></li>
+                    
+                        <li><a href="../../../../showcases/">SHOWCASES</a></li>
+                    
+                        <li><a href="../../../../join_us/">Join us</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+<div id="network-bg"></div>
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/Network_BG.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="../../../../tags/geonavi" title="GeoNAVI">
+                            GeoNAVI
+                        </a>
+                        
+                    </div>
+                    <h1>Measuring and visualizing place-based space-time job accessibility</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                thatdrwho
+                             
+                            on 
+                            Saturday, December 15, 2018
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <div style="clear:both;"></div>
+ 
+<p>New article first published online: <a href="https://www.sciencedirect.com/science/article/pii/S0966692318305994" target="_blank" rel="noopener">Journal of Transport Geography</a>; DOI: <a href="https://www.sciencedirect.com/science/article/pii/S0966692318305994" target="_blank" rel="noopener">10.1016/j.jtrangeo.2018.12.002</a></p>
+<p><strong>ABSTRACT:</strong> Place-based accessibility measures, such as the gravity-based model, are widely applied to study the spatial accessibility of workers to job opportunities in cities. However, gravity-based measures often suffer from three main limitations: (1) they are sensitive to the spatial configuration and scale of the units of analysis, which are not specifically designed for capturing job accessibility patterns and are often too coarse; (2) they omit the temporal dynamics of job opportunities and workers in the calculation, instead assuming that they remain stable over time; and (3) they do not lend themselves to dynamic geovisualization techniques. In this paper, a new methodological framework for measuring and visualizing place-based job accessibility in space and time is presented that overcomes these three limitations. First, discretization and dasymetric mapping approaches are used to disaggregate counts of jobs and workers over specific time intervals to a fine-scale grid. Second, <a class="workspace-trigger" href="https://www.sciencedirect.com/science/article/pii/S0966692318305994#bb0280" name="bbb0280">Shen&rsquo;s (1998)</a> gravity-based accessibility measure is modified to account for temporal fluctuations in the spatial distributions of the supply of jobs and the demand of workers and is used to estimate hourly job accessibility at each cell. Third, a four-dimensional volumetric rendering approach is employed to integrate the hourly job access estimates into a space-time cube environment, which enables the users to interactively visualize the space-time job accessibility patterns. The integrated framework is demonstrated in the context of a case study of the Tampa Bay region of Florida. The findings demonstrate the value of the proposed methodology in job accessibility analysis and the policy-making process.</p>
+<p>Read the full publication at <a href="https://www.sciencedirect.com/science/article/pii/S0966692318305994" target="_blank" rel="noopener">Journal of Transport Geography</a></p>
+<p>Read the preprint pdf at <a href="https://www.researchgate.net/publication/329697945_Measuring_and_visualizing_place-based_space-time_job_accessibility" target="_blank" rel="noopener">ResearchGate</a></p>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="../../../../2018/11/22/gis-based-simulation-and-analysis-of-intra-urban-commuting/" data-toggle="tooltip" data-placement="top" title="GIS-based simulation and analysis of intra-urban commuting">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="../../../../post/readme/" data-toggle="tooltip" data-placement="top" title="Clean White Theme for Hugo">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+
+
+            </div>
+
+            
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    <li>
+                        <a href="mailto:yujiehu@ufl.edu">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    <li>
+                        <a href="https://twitter.com/GeoNaviLab">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/geonavilab/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/thedrwho/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; GEONAVI LAB 2025
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script>
+  
+  particlesJS("network-bg", {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": { "enable": true, "value_area": 800 }
+      },
+      "color": { "value": "#888888" },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.7,
+        "random": true
+      },
+      "size": {
+        "value": 3,
+        "random": true
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#bbbbbb",
+        "opacity": 0.6,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1.5,
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": { "enable": true, "mode": "grab" },
+        "onclick": { "enable": false },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 140,
+          "line_linked": { "opacity": 0.8 }
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+</body>
+</html>

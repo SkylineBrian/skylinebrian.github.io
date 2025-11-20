@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="GEONAVI LAB">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="http://localhost:1313//img/Network_BG.jpg">
+    <meta property="twitter:image" content="http://localhost:1313//img/Network_BG.jpg" />
+    
+
+    
+    <meta name="title" content="Automated delineation of cancer service areas in northeast region of the united states: a network optimization approach" />
+    <meta property="og:title" content="Automated delineation of cancer service areas in northeast region of the united states: a network optimization approach" />
+    <meta property="twitter:title" content="Automated delineation of cancer service areas in northeast region of the united states: a network optimization approach" />
+    
+
+    
+    <meta name="description" content="New article first published online: Spatial and Spatio-temporal Epidemiology; DOI: 10.1016/j.sste.2020.100338 ABSTRACT: Objective Derivation of service areas is...">
+    <meta property="og:description" content="New article first published online: Spatial and Spatio-temporal Epidemiology; DOI: 10.1016/j.sste.2020.100338 ABSTRACT: Objective Derivation of service areas is..." />
+    <meta property="twitter:description" content="New article first published online: Spatial and Spatio-temporal Epidemiology; DOI: 10.1016/j.sste.2020.100338 ABSTRACT: Objective Derivation of service areas is..." />
+    
+
+    <meta property="og:url" content="http://localhost:1313/2020/03/06/automated-delineation-of-cancer-service-areas-in-northeast-region-of-the-united-states-a-network-optimization-approach/" />
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="GeoNAVI Lab, UF, human mobility, spatial networks, transportation geography, GIScience, accessibility, geovisualization">
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
+
+    <title>Automated delineation of cancer service areas in northeast region of the united states: a network optimization approach | GeoNAVI Lab at the University of Florida</title>
+
+    <link rel="canonical" href="../../../../2020/03/06/automated-delineation-of-cancer-service-areas-in-northeast-region-of-the-united-states-a-network-optimization-approach/">
+
+    
+
+    
+    <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="../../../../css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="../../../../css/zanshang.min.css">
+
+    
+    <link rel="stylesheet" href="../../../../css/font-awesome.all.min.css">
+
+    
+    
+    
+    
+
+    
+    <script src="../../../../js/jquery.min.js"></script>
+
+    
+    <script src="../../../../js/bootstrap.min.js"></script>
+
+    
+    <script src="../../../../js/hux-blog.min.js"></script>
+
+    
+    <script src="../../../../js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../../../">GEONAVI LAB</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../../../../">Home</a>
+                    </li>
+                    
+                    
+		    
+                        <li><a href="../../../../about/">ABOUT</a></li>
+                    
+                        <li><a href="../../../../people/">PEOPLE</a></li>
+                    
+                        <li><a href="../../../../publication/">PUBLICATIONS</a></li>
+                    
+                        <li><a href="../../../../downloads/">DOWNLOADS</a></li>
+                    
+                        <li><a href="../../../../showcases/">SHOWCASES</a></li>
+                    
+                        <li><a href="../../../../join_us/">Join us</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+<div id="network-bg"></div>
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/Network_BG.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="../../../../tags/geonavi" title="GeoNAVI">
+                            GeoNAVI
+                        </a>
+                        
+                    </div>
+                    <h1>Automated delineation of cancer service areas in northeast region of the united states: a network optimization approach</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                thatdrwho
+                             
+                            on 
+                            Friday, March 6, 2020
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <div style="clear:both;"></div>
+ 
+<p>New article first published online: <a href="https://www.sciencedirect.com/science/article/pii/S1877584520300162" target="_blank" rel="noopener">Spatial and Spatio-temporal Epidemiology</a>; DOI: <a href="https://www.sciencedirect.com/science/article/pii/S1877584520300162" target="_blank" rel="noopener">10.1016/j.sste.2020.100338</a></p>
+<p><strong>ABSTRACT:</strong></p>
+<p>Objective
+Derivation of service areas is an important methodology for evaluating healthcare variation, which can be refined to more robust, condition-specific, and empirically-based automated regions, using cancer service areas as an exemplar.</p>
+<p>Data sources/study setting
+Medicare claims (2014–2015) for the nine-state Northeast region were used to develop a ZIP-code-level origin-destination matrix for cancer services (surgery, chemotherapy, and radiation). This population-based study followed a utilization-based approach to delineate cancer service areas (CSAs) to develop and test an improved methodology for small area analyses.</p>
+<p>Data collection/extraction methods
+Using the cancer service origin-destination matrix, we estimated travel time between all ZIP-code pairs, and applied a community detection method to delineate CSAs, which were tested for localization, modularity, and compactness, and compared to existing service areas.</p>
+<p>Principal findings
+Delineating 17 CSAs in the Northeast yielded optimal parameters, with a mean localization index (LI) of 0.88 (min: 0.60, max: 0.98), compared to the 43 Hospital Referral Regions (HRR) in the region (mean LI: 0.68; min: 0.18, max: 0.97). Modularity and compactness were similarly improved for CSAs vs. HRRs.</p>
+<p>Conclusions
+Deriving cancer-specific service areas with an automated algorithm that uses empirical and network methods showed improved performance on geographic measures compared to more general, hospital-based service areas.</p>
+<p>Read the full publication at <a href="https://www.sciencedirect.com/science/article/pii/S1877584520300162" target="_blank" rel="noopener">Spatial and Spatio-temporal Epidemiology</a></p>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="../../../../2019/11/26/gis-and-health/" data-toggle="tooltip" data-placement="top" title="GIS and health">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="../../../../2020/04/09/estimating-road-network-accessibility-during-a-hurricane-evacuation-a-case-study-of-hurricane-irma-in-florida/" data-toggle="tooltip" data-placement="top" title="Estimating road network accessibility during a hurricane evacuation: A case study of hurricane Irma in Florida">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+
+
+            </div>
+
+            
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    <li>
+                        <a href="mailto:yujiehu@ufl.edu">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    <li>
+                        <a href="https://twitter.com/GeoNaviLab">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/geonavilab/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/thedrwho/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; GEONAVI LAB 2025
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script>
+  
+  particlesJS("network-bg", {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": { "enable": true, "value_area": 800 }
+      },
+      "color": { "value": "#888888" },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.7,
+        "random": true
+      },
+      "size": {
+        "value": 3,
+        "random": true
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#bbbbbb",
+        "opacity": 0.6,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1.5,
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": { "enable": true, "mode": "grab" },
+        "onclick": { "enable": false },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 140,
+          "line_linked": { "opacity": 0.8 }
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+</body>
+</html>

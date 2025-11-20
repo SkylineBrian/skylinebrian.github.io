@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="GEONAVI LAB">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="http://localhost:1313//img/Network_BG.jpg">
+    <meta property="twitter:image" content="http://localhost:1313//img/Network_BG.jpg" />
+    
+
+    
+    <meta name="title" content="A spatio-temporal kernel density estimation framework for predictive crime hotspot mapping and evaluation" />
+    <meta property="og:title" content="A spatio-temporal kernel density estimation framework for predictive crime hotspot mapping and evaluation" />
+    <meta property="twitter:title" content="A spatio-temporal kernel density estimation framework for predictive crime hotspot mapping and evaluation" />
+    
+
+    
+    <meta name="description" content="New article first published online: Applied Geography; DOI: 10.1016/j.apgeog.2018.08.001 ABSTRACT: Predictive hotspot mapping plays a critical role in hotspot p...">
+    <meta property="og:description" content="New article first published online: Applied Geography; DOI: 10.1016/j.apgeog.2018.08.001 ABSTRACT: Predictive hotspot mapping plays a critical role in hotspot p..." />
+    <meta property="twitter:description" content="New article first published online: Applied Geography; DOI: 10.1016/j.apgeog.2018.08.001 ABSTRACT: Predictive hotspot mapping plays a critical role in hotspot p..." />
+    
+
+    <meta property="og:url" content="http://localhost:1313/2018/08/23/a-spatio-temporal-kernel-density-estimation-framework-for-predictive-crime-hotspot-mapping-and-evaluation/" />
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="GeoNAVI Lab, UF, human mobility, spatial networks, transportation geography, GIScience, accessibility, geovisualization">
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
+
+    <title>A spatio-temporal kernel density estimation framework for predictive crime hotspot mapping and evaluation | GeoNAVI Lab at the University of Florida</title>
+
+    <link rel="canonical" href="../../../../2018/08/23/a-spatio-temporal-kernel-density-estimation-framework-for-predictive-crime-hotspot-mapping-and-evaluation/">
+
+    
+
+    
+    <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="../../../../css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="../../../../css/zanshang.min.css">
+
+    
+    <link rel="stylesheet" href="../../../../css/font-awesome.all.min.css">
+
+    
+    
+    
+    
+
+    
+    <script src="../../../../js/jquery.min.js"></script>
+
+    
+    <script src="../../../../js/bootstrap.min.js"></script>
+
+    
+    <script src="../../../../js/hux-blog.min.js"></script>
+
+    
+    <script src="../../../../js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../../../">GEONAVI LAB</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../../../../">Home</a>
+                    </li>
+                    
+                    
+		    
+                        <li><a href="../../../../about/">ABOUT</a></li>
+                    
+                        <li><a href="../../../../people/">PEOPLE</a></li>
+                    
+                        <li><a href="../../../../publication/">PUBLICATIONS</a></li>
+                    
+                        <li><a href="../../../../downloads/">DOWNLOADS</a></li>
+                    
+                        <li><a href="../../../../showcases/">SHOWCASES</a></li>
+                    
+                        <li><a href="../../../../join_us/">Join us</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+<div id="network-bg"></div>
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/Network_BG.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="../../../../tags/geonavi" title="GeoNAVI">
+                            GeoNAVI
+                        </a>
+                        
+                    </div>
+                    <h1>A spatio-temporal kernel density estimation framework for predictive crime hotspot mapping and evaluation</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                thatdrwho
+                             
+                            on 
+                            Thursday, August 23, 2018
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <div style="clear:both;"></div>
+ 
+<p>New article first published online: <a href="https://www.sciencedirect.com/science/article/pii/S0143622818300560?via%3Dihub" target="_blank" rel="noopener">Applied Geography</a>; DOI: <a href="https://www.sciencedirect.com/science/article/pii/S0143622818300560?via%3Dihub" target="_blank" rel="noopener">10.1016/j.apgeog.2018.08.001</a></p>
+<p><strong>ABSTRACT:</strong> Predictive hotspot mapping plays a critical role in hotspot policing. Existing methods such as the popular kernel density estimation (KDE) do not consider the temporal dimension of crime. Building upon recent works in related fields, this article proposes a spatio-temporal framework for predictive hotspot mapping and evaluation. Comparing to existing work in this scope, the proposed framework has four major features: (1) a spatio-temporal kernel density estimation (STKDE) method is applied to include the temporal component in predictive hotspot mapping, (2) a data-driven optimization technique, the likelihood cross-validation, is used to select the most appropriate bandwidths, (3) a statistical significance test is designed to filter out false positives in the density estimates, and (4) a new metric, the predictive accuracy index (PAI) curve, is proposed to evaluate predictive hotspots at multiple areal scales. The framework is illustrated in a case study of residential burglaries in Baton Rouge, Louisiana in 2011, and the results validate its utility.</p>
+<p>Read the full publication at <a href="https://www.sciencedirect.com/science/article/pii/S0143622818300560?via%3Dihub" target="_blank" rel="noopener">Applied Geography</a></p>
+<p>Read the preprint pdf at <a href="https://www.researchgate.net/publication/327187224_A_spatio-temporal_kernel_density_estimation_framework_for_predictive_crime_hotspot_mapping_and_evaluation" target="_blank" rel="noopener">ResearchGate</a></p>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="../../../../2018/08/06/where-are-the-dangerous-intersections-for-pedestrians-and-cyclists-a-colocation-based-approach/" data-toggle="tooltip" data-placement="top" title="Where are the dangerous intersections for pedestrians and cyclists: A colocation-based approach">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="../../../../2018/11/22/gis-based-simulation-and-analysis-of-intra-urban-commuting/" data-toggle="tooltip" data-placement="top" title="GIS-based simulation and analysis of intra-urban commuting">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+
+
+            </div>
+
+            
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    <li>
+                        <a href="mailto:yujiehu@ufl.edu">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    <li>
+                        <a href="https://twitter.com/GeoNaviLab">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/geonavilab/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/thedrwho/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; GEONAVI LAB 2025
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script>
+  
+  particlesJS("network-bg", {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": { "enable": true, "value_area": 800 }
+      },
+      "color": { "value": "#888888" },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.7,
+        "random": true
+      },
+      "size": {
+        "value": 3,
+        "random": true
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#bbbbbb",
+        "opacity": 0.6,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1.5,
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": { "enable": true, "mode": "grab" },
+        "onclick": { "enable": false },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 140,
+          "line_linked": { "opacity": 0.8 }
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+</body>
+</html>

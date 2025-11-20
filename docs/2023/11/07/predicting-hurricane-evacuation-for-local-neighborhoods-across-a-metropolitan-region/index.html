@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="GEONAVI LAB">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="http://localhost:1313//img/Network_BG.jpg">
+    <meta property="twitter:image" content="http://localhost:1313//img/Network_BG.jpg" />
+    
+
+    
+    <meta name="title" content="Predicting hurricane evacuation for local neighborhoods across a metropolitan region" />
+    <meta property="og:title" content="Predicting hurricane evacuation for local neighborhoods across a metropolitan region" />
+    <meta property="twitter:title" content="Predicting hurricane evacuation for local neighborhoods across a metropolitan region" />
+    
+
+    
+    <meta name="description" content="New article first published online: International Journal of Disaster Risk Reduction ABSTRACT: To mitigate the devastating impacts of hurricanes on people&#39;s liv...">
+    <meta property="og:description" content="New article first published online: International Journal of Disaster Risk Reduction ABSTRACT: To mitigate the devastating impacts of hurricanes on people&#39;s liv..." />
+    <meta property="twitter:description" content="New article first published online: International Journal of Disaster Risk Reduction ABSTRACT: To mitigate the devastating impacts of hurricanes on people&#39;s liv..." />
+    
+
+    <meta property="og:url" content="http://localhost:1313/2023/11/07/predicting-hurricane-evacuation-for-local-neighborhoods-across-a-metropolitan-region/" />
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="GeoNAVI Lab, UF, human mobility, spatial networks, transportation geography, GIScience, accessibility, geovisualization">
+    <link rel="shortcut icon" href="../../../../img/favicon.ico">
+
+    <title>Predicting hurricane evacuation for local neighborhoods across a metropolitan region | GeoNAVI Lab at the University of Florida</title>
+
+    <link rel="canonical" href="../../../../2023/11/07/predicting-hurricane-evacuation-for-local-neighborhoods-across-a-metropolitan-region/">
+
+    
+
+    
+    <link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="../../../../css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="../../../../css/zanshang.min.css">
+
+    
+    <link rel="stylesheet" href="../../../../css/font-awesome.all.min.css">
+
+    
+    
+    
+    
+
+    
+    <script src="../../../../js/jquery.min.js"></script>
+
+    
+    <script src="../../../../js/bootstrap.min.js"></script>
+
+    
+    <script src="../../../../js/hux-blog.min.js"></script>
+
+    
+    <script src="../../../../js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../../../">GEONAVI LAB</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../../../../">Home</a>
+                    </li>
+                    
+                    
+		    
+                        <li><a href="../../../../about/">ABOUT</a></li>
+                    
+                        <li><a href="../../../../people/">PEOPLE</a></li>
+                    
+                        <li><a href="../../../../publication/">PUBLICATIONS</a></li>
+                    
+                        <li><a href="../../../../downloads/">DOWNLOADS</a></li>
+                    
+                        <li><a href="../../../../showcases/">SHOWCASES</a></li>
+                    
+                        <li><a href="../../../../join_us/">Join us</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+<div id="network-bg"></div>
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/Network_BG.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="../../../../tags/geonavi" title="GeoNAVI">
+                            GeoNAVI
+                        </a>
+                        
+                    </div>
+                    <h1>Predicting hurricane evacuation for local neighborhoods across a metropolitan region</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                thatdrwho
+                             
+                            on 
+                            Tuesday, November 7, 2023
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <div style="clear: both"></div>
+New article first published online: <a href="https://www.sciencedirect.com/science/article/abs/pii/S2212420923005976" target="_blank" rel="noopener">International Journal of Disaster Risk Reduction</a>
+<p><strong>ABSTRACT:</strong> To mitigate the devastating impacts of hurricanes on people&rsquo;s lives, communities, and societal infrastructures, disaster management would benefit considerably from a detailed understanding of evacuation, including the socio-demographics of the populations that evacuate, or remain, down to disaggregated geographic levels such as local neighborhoods. A detailed household evacuation prediction model for local neighborhoods requires both a robust household evacuation decision model and individual household data for small geographic units. This paper utilizes a recently published statistical meta-analysis for the first requirement and then conducts a rigorous population synthesis procedure for the second. Our model produces predicted non-evacuation rates for all US Census block groups for the Tampa-St. Petersburg-Clearwater Metropolitan Statistical Area for a Hurricane Irma-like storm along with their socio-demographic and hurricane impact risk profiles. Our model predictions indicate that non-evacuation rates are likely to vary considerably, even across neighboring block groups, driven by the variability in evacuation risk profiles. Our results also demonstrate how different predictors may come to the fore in influencing non-evacuation in different block groups, and that predictors which may have an outsize impact on individual household evacuation decisions, such as Race, are not necessarily associated with the greatest differentials in non-evacuation rates when we aggregate households to block group level and above. Our research is intended to provide a framework for the design of hurricane evacuation prediction tools that could be used in disaster management.</p>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="../../../../2023/10/11/dr-yujie-hu-guest-edits-the-sustainable-transportation-and-mobility-solutions-collection-in-scientific-reports/" data-toggle="tooltip" data-placement="top" title="Dr. Yujie Hu guest-edits the &#34;Sustainable transportation and mobility solutions&#34; collection in Scientific Reports">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="../../../../2024/01/22/multiscale-complex-network-analysis-of-commuting-efficiency-urban-connectivity-hierarchy-and-labor-market/" data-toggle="tooltip" data-placement="top" title="Multiscale Complex Network Analysis of Commuting Efficiency: Urban Connectivity, Hierarchy, and Labor Market">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+
+
+            </div>
+
+            
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    <li>
+                        <a href="mailto:yujiehu@ufl.edu">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    <li>
+                        <a href="https://twitter.com/GeoNaviLab">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/geonavilab/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/thedrwho/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; GEONAVI LAB 2025
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script>
+  
+  particlesJS("network-bg", {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": { "enable": true, "value_area": 800 }
+      },
+      "color": { "value": "#888888" },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.7,
+        "random": true
+      },
+      "size": {
+        "value": 3,
+        "random": true
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#bbbbbb",
+        "opacity": 0.6,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1.5,
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": { "enable": true, "mode": "grab" },
+        "onclick": { "enable": false },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 140,
+          "line_linked": { "opacity": 0.8 }
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+</body>
+</html>
