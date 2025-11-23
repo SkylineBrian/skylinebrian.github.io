@@ -1,5 +1,5 @@
 baseurl = "https://skylinebrian.github.io/"
-title = "GEONAVI Lab"
+title = "GeoNAVI Lab"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
 preserveTaxonomyNames = true
@@ -26,7 +26,7 @@ canonifyURLs = true
   SEOTitle = "GeoNAVI Lab at the University of Florida"
   description = "GeoNAVI Lab focuses on geovisualization, human mobility, spatial networks, transportation analytics, and urban informatics."
   keyword = "GeoNAVI Lab, UF, human mobility, spatial networks, transportation geography, GIScience, accessibility, geovisualization"
-  slogan = "Dr. Yujie Hu @ University of Florida"
+  slogan = "Dr. Yujie Hu at University of Florida"
 
   upstreamAttribution = false
   showtoc = false
@@ -43,7 +43,7 @@ canonifyURLs = true
 
   # --- Sidebar Content ---
   sidebar_about_description = "Geovisualization & Network Analysis Laboratory at the University of Florida"
-  sidebar_avatar = "img/lab-logo.png"    # 建议换成你 lab 的 logo
+  sidebar_avatar = "img/lab-logo.png"
 
   featured_tags = false
   featured_condition_size = 1
