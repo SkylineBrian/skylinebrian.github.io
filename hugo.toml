@@ -1,5 +1,5 @@
 baseurl = "https://skylinebrian.github.io/"
-title = "GeoNAVI Lab"
+title = "GEONAVI Lab"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
 preserveTaxonomyNames = true
